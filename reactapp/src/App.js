@@ -6,6 +6,7 @@ import {
     Route,
     Routes
 } from 'react-router-dom';
+import Header from './components/Header'
 import Navigation from './Navigation'
 import Home from './Home'
 import Login from './Login'
@@ -35,6 +36,7 @@ const App = () => {
   return (
     <Router>
       <div className="App">
+        <Header />
         <Navigation isLoggedIn={jwt ? true : false} />
         <Routes>
           <Route exact path='/' element={<Home />} />

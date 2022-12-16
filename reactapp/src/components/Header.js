@@ -1,11 +1,22 @@
 import React from 'react';
+import styled from 'styled-components';
 
 const Header = () => {
     return (
         <header>
-            <h1>This is the Header</h1>
+            <H1>Quiz-Master 3000</H1>
+            
         </header>
  
     )
 }
 export default Header
+
+const H1 = styled.h1 `
+    font-size: 5rem;
+    font-family: 'Roboto Slab', 'Roboto', san-serif;
+    font-weight: 500;
+    text-align: center;
+    color: rgba(193, 11, 111, 1);
+    margin-bottom: 2rem;
+`

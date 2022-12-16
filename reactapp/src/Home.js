@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
-import axios from 'axios'
-import queryString from 'querystring'
-
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import axios from 'axios';
+import queryString from 'querystring';
 
 const Home = () => {
 	const [quizzes, setQuizzes] = useState([])
@@ -21,7 +20,7 @@ const Home = () => {
 	}, []);
 	return (
 		<div>
-			<h1>Take a Quiz!</h1>
+			<h2>Take a Quiz!</h2>
 			<p>Click on any quiz listed below to take one.</p>
 			<ul>
 				{quizzes.map(q => (

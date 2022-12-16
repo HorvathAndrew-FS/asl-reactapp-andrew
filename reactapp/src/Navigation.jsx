@@ -5,12 +5,12 @@ class Navigation extends React.Component
 {
 	render() {
 		return (
-			<header>
+			<div>
 				<ul>
 					<li><Link to="/">Home</Link></li>
 					{this.props.isLoggedIn && <li><Link to="/logout">Logout</Link></li>}
 				</ul>
-			</header>
+			</div>
 		);
 	}
 }
