@@ -104,11 +104,11 @@ module.exports = {
     },
   ], {}),
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.bulkDelete('Quizzes', {[Sequelize.Op.or]: [
-      {quizId: 1}, 
-      {quizId: 2},
-      {quizId: 3},
-      {quizId: 4},
+    await queryInterface.bulkDelete('Questions', {[Sequelize.Op.or]: [
+      { quizId: 1 }, 
+      { quizId: 2 },
+      { quizId: 3 },
+      { quizId: 4 },
     ]});
   }
 };
