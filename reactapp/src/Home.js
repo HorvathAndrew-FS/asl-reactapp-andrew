@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import queryString from 'querystring';
+import styled from 'styled-components';
 
 const Home = () => {
 	const [quizzes, setQuizzes] = useState([])
@@ -19,9 +20,9 @@ const Home = () => {
 		fetchQuizes()
 	}, []);
 	return (
-		<div>
-			<h2>Take a Quiz!</h2>
-			<p>Click on any quiz listed below to take one.</p>
+		<HomeDiv>
+			<QuizH2>Take a Quiz!</QuizH2>
+			<HomeH3>Click on any quiz listed below to take one.</HomeH3>
 			<ul>
 				{quizzes.map(q => (
 					<li>
@@ -29,8 +30,23 @@ const Home = () => {
 					</li>
 				))}
 			</ul>
-		</div>
+		</HomeDiv>
 	)
 }
 
 export default Home
+
+const HomeDiv = styled.div `
+	padding: 1rem;
+`
+
+const QuizH2 = styled.h2 `
+	font-size: 4rem;
+	margin: 0 0 1.5rem 0;
+	color: rgba(72, 64, 65, 1);
+`
+const HomeH3 = styled.h3 `
+	font-size: 2.5rem;
+	margin: 0 0 1rem 0;
+	color: rgba(32, 131, 35, 1);
+`

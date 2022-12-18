@@ -7,11 +7,12 @@ import {
     Routes
 } from 'react-router-dom';
 import Header from './components/Header'
-import Navigation from './Navigation'
+import Navigation from './components/Navigation'
 import Home from './Home'
 import Login from './Login'
 import Quiz from './Quiz'
 import queryString from 'querystring';
+import styled from 'styled-components';
 
 const App = () => {
   const [jwt, setJwt] = useState('')
@@ -35,16 +36,26 @@ const App = () => {
 
   return (
     <Router>
-      <div className="App">
+      <div>
         <Header />
+      <AppDiv>
         <Navigation isLoggedIn={jwt ? true : false} />
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route exact path='/quizzes/:id' element={<Quiz />} />
         </Routes>
+      </AppDiv>
       </div>
     </Router>
   );
 }
 
 export default App;
+
+const AppDiv = styled.div `
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+`
