@@ -41,7 +41,7 @@ const App = () => {
       <AppDiv>
         <Navigation isLoggedIn={jwt ? true : false} />
         <Routes>
-          <Route exact path='/' element={<Home />} />
+          <Route path='/' element={<Home />} />
           <Route exact path='/quizzes/:id' element={<Quiz />} />
           <Route path='logout' element={<App />} />
 

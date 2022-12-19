@@ -25,6 +25,7 @@ const Home = () => {
 			<HomeH3>Click on any quiz listed below to take one.</HomeH3>
 			<ul>
 				{quizzes.map(q => (
+					
 					<QuizLi>
 						<Link to={'/quizzes/' + q.id}>{q.name}</Link>
 					</QuizLi>
