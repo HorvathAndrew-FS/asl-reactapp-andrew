@@ -30,7 +30,6 @@ const Quiz = () => {
 								{q.Choices.map(c => (
 									<div>
 										<ChoiceInputs type="radio" name={'question_' + q.id} required />
-											{ console.log(c) }
 										<ChoiceLabel for={'question_' + q.id}>{c.label}</ChoiceLabel>
 										<p>{console.log('question' + q.id)}</p>
 									</div>
