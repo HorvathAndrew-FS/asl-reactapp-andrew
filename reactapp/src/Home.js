@@ -25,9 +25,9 @@ const Home = () => {
 			<HomeH3>Click on any quiz listed below to take one.</HomeH3>
 			<ul>
 				{quizzes.map(q => (
-					<li>
+					<QuizLi>
 						<Link to={'/quizzes/' + q.id}>{q.name}</Link>
-					</li>
+					</QuizLi>
 				))}
 			</ul>
 		</HomeDiv>
@@ -42,11 +42,22 @@ const HomeDiv = styled.div `
 
 const QuizH2 = styled.h2 `
 	font-size: 4rem;
-	margin: 0 0 1.5rem 0;
+	margin: 0 0 0rem 0;
 	color: rgba(72, 64, 65, 1);
 `
+const QuizLi = styled.li `
+	font-size: 2.25rem;
+	color: rgba(72, 64, 65, 1);
+	margin: 2rem 0 0 0;
+
+	&:hover {
+		color: rgba(193, 11, 111, 1);
+		font-weight: 700;
+	}
+`
+
 const HomeH3 = styled.h3 `
 	font-size: 2.5rem;
-	margin: 0 0 1rem 0;
+	margin: 0 0 3rem 0;
 	color: rgba(32, 131, 35, 1);
 `

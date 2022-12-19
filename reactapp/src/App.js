@@ -43,6 +43,8 @@ const App = () => {
         <Routes>
           <Route exact path='/' element={<Home />} />
           <Route exact path='/quizzes/:id' element={<Quiz />} />
+          <Route path='logout' element={<App />} />
+
         </Routes>
       </AppDiv>
       </div>

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-
+import OutButton from './Logout';
 class Navigation extends React.Component
 {
 	render() {
@@ -9,7 +9,8 @@ class Navigation extends React.Component
 			<NavDiv>
 				<NavUl>
 					<li><Link to="/">Home</Link></li>
-					{this.props.isLoggedIn && <li><Link to="/login">Logout</Link></li>}
+					{/* {this.props.isLoggedIn && <li><Link to="/logout">Logout</Link></li>} */}
+					<OutButton />
 				</NavUl>
 			</NavDiv>
 		);
